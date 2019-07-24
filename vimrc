@@ -55,12 +55,12 @@ endif
 "set mouse=a		" Enable mouse usage (all modes)
 
 " Source a global configuration file if available
-if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
-endif
-
-autocmd BufNewFile *.py execute 'silent! ls:.*:#!/usr/bin/python3'
+autocmd BufNewFile *.py execute 'silent! 1s:.*:#!/usr/bin/python3'
 
 if has('autocmd')
-	filetype plugin indent on
+        filetype plugin indent on
+endif
+
+if filereadable("/etc/vim/vimrc.local")
+  source /etc/vim/vimrc.local
 endif
