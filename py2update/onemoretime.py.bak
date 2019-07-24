@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+  
+thisround = 0               #int round initiated to 0
+while(True):                #sets p an inf loop cond
+    print('What is the IPv4 address used to broadcast on a local network? ')
+    answer = raw_input()    #str ans collected from user
+    thisround = thisround + 1 #inc counter
+    if (answer == "255.255.255.255"):   #logic correct ans
+        print("Correct!")
+        break
+    elif (thisround == 3):  #logic to ensure round has not reached 3
+        print('Sorry, the answer was 255.255.255.255')
+        break
+    else:                   #if ans was wrong and round is not 3 yet
+        print("Sorry, Try again!")
